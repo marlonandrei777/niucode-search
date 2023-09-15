@@ -1,5 +1,7 @@
+import { Header } from "../../components/Header";
+
 export function Search() {
   return (
-    <h1>Search</h1>
+    <Header />
   );
 }

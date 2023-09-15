@@ -18,13 +18,19 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${(props) => props.theme["gray-100"]};
+    background-color: ${(props) => props.theme["white"]};
     color: ${(props) => props.theme["gray-400"]}; /* cor de texto padrão */
     -webkit-font-smoothing: antialiased;
   }
   
   body, input, textarea, button {
     font: 400 1rem "DM Sans", sans-serif;
+  }
+
+  #root {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
   }
 
   button {
