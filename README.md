@@ -40,6 +40,7 @@ Além disso, para facilitar a visualização do código você vai precisar de um
 ```bash
 #realize o clone do repositório
 $ git clone https://github.com/marlonandrei777/niucode-search.git
+```
 ```bash
 #acesse a pasta do projeto
 $ cd niucode-search
