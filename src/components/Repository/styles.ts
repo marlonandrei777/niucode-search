@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-/* export const RepositoryDetail = styled.div`
-  margin-top: 2.5rem;
-
-  strong {
-    font-size: 2rem;
-  }
-`; */
-
 export const RepositoryDetail = styled.div`
   margin-top: 2.5rem;
 
@@ -15,13 +7,18 @@ export const RepositoryDetail = styled.div`
     background: ${(props) => props.theme.white};
     border-radius: 5px;
     width: 100%;
-    padding: 0.625rem;
+    padding: 1rem;
     display: block;
     text-decoration: none;
 
     display: flex;
     align-items: center;
     transition: transform 0.2s;
+
+    @media (max-width: 822px) {
+      display: flex;
+      flex-direction: column;
+    }
 
     &:hover {
       transform: translateX(10px);
@@ -32,7 +29,6 @@ export const RepositoryDetail = styled.div`
     }
 
     div {
-      margin: 0 16px;
       flex: 1;
 
       strong {
@@ -44,13 +40,20 @@ export const RepositoryDetail = styled.div`
         font-size: 1.125rem;
         color: ${(props) => props.theme["gray-300"]};
         margin-top: 4px;
+
+        max-width: 32rem;
       }
     }
 
     ul {
       display: flex;
+      align-items: center;
       list-style: none;
       margin-right: 2rem;
+
+      @media (max-width: 822px) {
+        margin-top: 1rem;
+      }
 
       li {
         & + li {
@@ -66,6 +69,7 @@ export const RepositoryDetail = styled.div`
         span {
           display: block;
           margin-top: 0.25rem;
+
           color: ${(props) => props.theme["gray-300"]};
         }
       }
@@ -74,6 +78,10 @@ export const RepositoryDetail = styled.div`
     svg {
       margin-left: auto;
       color: #cbcbd6;
+
+      @media (max-width: 824px) {
+        display: none;
+      }
     }
   }
 `;

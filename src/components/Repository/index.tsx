@@ -38,8 +38,9 @@ export function Repository({ repository }: RepositoryProps) {
             </li>
             <li>
               <strong>{repo.open_issues_count}</strong>
-              <span>Issues abertas</span>
+              <span>Issues</span>
             </li>
+
           </ul>
           <CaretRight size={24} />
         </a>
