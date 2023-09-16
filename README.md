@@ -14,7 +14,7 @@
 
 O Niucode Search é uma aplicação Web onde podemos filtrar por usuarios do github, ver o seu perfil e além de detalhes do seu repositório.<br>
 <br>
-Possuindo campo de busca por usuário, e uma tabela com histórico dos ultimos perfis pesquisados.
+Possuindo campo de busca por usuário, e uma tabela com histórico dos ultimos perfis pesquisados organizado por timestamp.
 ## 🔥 Tecnologias
 
 - Vite
@@ -39,10 +39,10 @@ Além disso, para facilitar a visualização do código você vai precisar de um
 
 ```bash
 #realize o clone do repositório
-$ git clone https://github.com/marlonandrei777/niuco-challenge.git
+$ git clone https://github.com/marlonandrei777/niucode-search.git
 ```bash
 #acesse a pasta do projeto
-$ cd niuco-challenge
+$ cd niucode-search
 ```
 ```bash 
 #instale as dependências (com npm)
@@ -52,9 +52,4 @@ $ npm i
 #execute o projeto
 $ npm run dev
 ```
-```bash 
-#execute a fake API (json-Server)
-$ npm run dev:server
-```
-_A servidor estará em execução em: localhost:3000_ <br/>
 _A aplicação estará em execução em: localhost:5173_
