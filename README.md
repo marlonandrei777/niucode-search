@@ -8,7 +8,7 @@
   <a href="https://github.com/marlonandrei777/in8-finances/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=d248a9&labelColor=000000"></a>
 </p>
 
-![](.github/in8.png)
+![](.github/niuco.png)
 
 ## 💻 Projeto
 
