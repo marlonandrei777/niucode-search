@@ -1,13 +1,16 @@
+import { RepositoriesContextProvider } from "./context/RepositoriesContext"
 import { ThemeProvider } from "styled-components"
+import { Router } from "./routes"
 import { defaultTheme } from "./styles/themes/default"
 import { GlobalStyle } from "./styles/global"
-import { Router } from "./routes"
+
 
 function App() {
-
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Router />
+      <RepositoriesContextProvider>
+        <Router />
+      </RepositoriesContextProvider>
       <GlobalStyle />
     </ThemeProvider>
   )

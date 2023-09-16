@@ -11,6 +11,7 @@ export function Header() {
         <NavLink to="/" title='Pesquisar usuário'>
           <MagnifyingGlass size={24} />
         </NavLink>
+
         <NavLink to="history" title='Histórico'>
           <Scroll size={24} />
         </NavLink>

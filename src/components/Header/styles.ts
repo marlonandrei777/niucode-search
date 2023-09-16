@@ -23,9 +23,9 @@ export const HeaderContainer = styled.div`
 
       color: ${(props) => props.theme["gray-400"]};
 
-      // para o icone voltar pro centro mesmo q a borda n apareça
+      //  voltar pro centro mesmo q a borda n apareça
       border-top: 3px solid transparent;
-      // para o icone nao ir pra cima quando usar hover
+      //  nao ir pra cima quando usar hover
       border-bottom: 3px solid transparent;
 
       &:hover {

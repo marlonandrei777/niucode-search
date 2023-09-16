@@ -7,4 +7,6 @@ export const defaultTheme = {
   "gray-400": "#333333" /* cor da font */,
 
   "blue-100": "#0046FF" /* background do botao */,
+
+  error: "#c53030",
 } as const;
