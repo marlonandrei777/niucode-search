@@ -1,27 +1,60 @@
-# React + TypeScript + Vite
+<h1 align="center">
+   Niucode Search
+</h1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<br>
 
-Currently, two official plugins are available:
+<p align="center">
+  <a href="https://github.com/marlonandrei777/in8-finances/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=d248a9&labelColor=000000"></a>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![](.github/in8.png)
 
-## Expanding the ESLint configuration
+## 💻 Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+O Niucode Search é uma aplicação Web onde podemos filtrar por usuarios do github, ver o seu perfil e além de detalhes do seu repositório.<br>
+<br>
+Possuindo campo de busca por usuário, e uma tabela com histórico dos ultimos perfis pesquisados.
+## 🔥 Tecnologias
 
-- Configure the top-level `parserOptions` property like this:
+- Vite
+- React
+- TypeScript
+- Styled Components
+- Axios
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+### Adicionais
+- Padrão de Commits
+- Readme
+- Versionamento de código utilizando Git
+
+## 🛠 Instalação
+
+#### Pré-requisitos
+Antes de começar a rodar o projeto, você precisa ter instalado em sua máquina as seguintes ferramentas: 
+[Git](https://git-scm.com/), [NodeJs](https://nodejs.org/en/).<br>
+Além disso, para facilitar a visualização do código você vai precisar de um editor: [VSCode](https://code.visualstudio.com/).
+
+## ⚙ Rodando a aplicação
+
+```bash
+#realize o clone do repositório
+$ git clone https://github.com/marlonandrei777/niuco-challenge.git
+```bash
+#acesse a pasta do projeto
+$ cd niuco-challenge
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+```bash 
+#instale as dependências (com npm)
+$ npm i
+```
+```bash 
+#execute o projeto
+$ npm run dev
+```
+```bash 
+#execute a fake API (json-Server)
+$ npm run dev:server
+```
+_A servidor estará em execução em: localhost:3000_ <br/>
+_A aplicação estará em execução em: localhost:5173_
