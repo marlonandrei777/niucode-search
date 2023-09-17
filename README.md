@@ -24,6 +24,7 @@ Possuindo campo de busca por usuário, e uma tabela com histórico dos ultimos p
 - Axios
 
 ### Adicionais
+- Tabela de histórico de usuários pesquisados armazenados no localStorage
 - Padrão de Commits
 - Readme
 - Versionamento de código utilizando Git
