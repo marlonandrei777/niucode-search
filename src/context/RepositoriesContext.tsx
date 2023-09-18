@@ -1,17 +1,6 @@
 import { createContext, ChangeEvent, FormEvent, ReactNode, useEffect, useState } from "react";
 import { api } from "../services/api";
 
-type CustomFormEvent = {
-  preventDefault: () => void;
-  currentTarget: {
-    elements: {
-      user: {
-        value: string;
-      };
-    };
-  };
-};
-
 type UserData = {
   login: string;
   avatar_url: string;
@@ -82,7 +71,7 @@ export function RepositoriesContextProvider({ children }: RepositoriesContextPro
   }, [searchHistory])
 
   // adicionando usuario e repositorio
-  async function handleAddRepository(event: FormEvent<HTMLFormElement> | CustomFormEvent): Promise<void> {
+  async function handleAddRepository(event: FormEvent<HTMLFormElement>): Promise<void> {
     event.preventDefault()
 
     if (!newRepo) {
