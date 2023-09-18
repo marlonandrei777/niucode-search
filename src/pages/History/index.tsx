@@ -5,7 +5,6 @@ import { GithubLogo } from 'phosphor-react';
 import { Title } from '../Search/styles'
 import { HistoryContainer, HistoryList, Enpty } from './styles';
 
-
 export function History() {
   const { searchHistory, handleHistoryItemClick } = useContext(RepositoriesContext)
 

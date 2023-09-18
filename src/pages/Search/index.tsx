@@ -10,7 +10,6 @@ export function Search() {
     handleNewUserChange,
     inputError,
     users,
-    repositories
   } = useContext(RepositoriesContext)
 
   return (
@@ -47,7 +46,7 @@ export function Search() {
             </header>
           ))}
 
-          <Repository repository={repositories} />
+          <Repository />
         </RepositoryUser>
       }
     </>

@@ -1,24 +1,14 @@
+import { useContext } from 'react'
 import { CaretRight } from 'phosphor-react';
 import { RepositoryDetail } from "./styles";
+import { RepositoriesContext } from '../../context/RepositoriesContext';
 
-type RepositoryData = {
-  id: number
-  name: string;
-  description: string;
-  stargazers_count: number;
-  forks_count: number;
-  open_issues_count: number;
-  html_url: string;
-}
+export function Repository() {
+  const { repositories } = useContext(RepositoriesContext)
 
-type RepositoryProps = {
-  repository: RepositoryData[];
-}
-
-export function Repository({ repository }: RepositoryProps) {
   return (
     <RepositoryDetail>
-      {repository.map(repo => (
+      {repositories.map(repo => (
         <a key={repo.id} href={repo.html_url} target="blank">
           <div>
             <strong>{repo.name}</strong>
