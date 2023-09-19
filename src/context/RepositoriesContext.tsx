@@ -1,4 +1,13 @@
-import { createContext, ChangeEvent, FormEvent, ReactNode, useEffect, useState } from "react";
+import {
+  createContext,
+  ChangeEvent,
+  FormEvent,
+  ReactNode,
+  useEffect,
+  useState,
+  useCallback
+} from "react";
+
 import { api } from "../services/api";
 
 type UserData = {
@@ -46,6 +55,7 @@ export function RepositoriesContextProvider({ children }: RepositoriesContextPro
   const [users, setUsers] = useState<UserData[]>([]);
   const [inputError, setInputError] = useState('');
   const [repositories, setRepositories] = useState<RepositoryData[]>([]);
+  const [searchClicked, setSearchClicked] = useState(false);
   // pegando os dados do localStorage apos o carregamento
   const [searchHistory, setSearchHistory] = useState<HistoryProps[]>(() => {
     const storagedHistory = localStorage.getItem('@NiucodeSearch:searchHistory')
@@ -70,10 +80,7 @@ export function RepositoriesContextProvider({ children }: RepositoriesContextPro
     );
   }, [searchHistory])
 
-  // adicionando usuario e repositorio
-  async function handleAddRepository(event: FormEvent<HTMLFormElement>): Promise<void> {
-    event.preventDefault()
-
+  const addRepository = useCallback(async () => {
     if (!newRepo) {
       setInputError('Digite o nome do Usuário')
       return;
@@ -93,16 +100,31 @@ export function RepositoriesContextProvider({ children }: RepositoriesContextPro
         { user: newRepo, timestamp },
         ...state,
       ]);
-      setNewRepo('')
+      setNewRepo('');
       setInputError('')
     } catch (error) {
       setInputError('Erro na busca por esse usuário')
     }
+  }, [newRepo])
+
+  // adicionando usuario e repositorio
+  function handleAddRepository(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    addRepository()
   }
+
+  /* observando as mudanças em searchClicked */
+  useEffect(() => {
+    if (searchClicked) {
+      addRepository()
+      setSearchClicked(false);
+    }
+  }, [searchClicked, addRepository]);
 
   // Preenche o campo de entrada com o nome do user clicado
   function handleHistoryItemClick(user: string) {
     setNewRepo(user);
+    setSearchClicked(true)
   }
 
   return (
@@ -115,7 +137,7 @@ export function RepositoriesContextProvider({ children }: RepositoriesContextPro
         searchHistory,
         handleNewUserChange,
         handleAddRepository,
-        handleHistoryItemClick
+        handleHistoryItemClick,
       }}
     >
       {children}
